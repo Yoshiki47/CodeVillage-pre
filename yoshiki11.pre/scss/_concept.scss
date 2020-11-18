@@ -1,0 +1,73 @@
+.concept {
+    height: 967px;
+    background:linear-gradient(180deg, #A193861F 0%, #A193861F 40%, #A1938689 40%, #A1938689 60%);
+    @include tab {
+        height: 710px;
+        background:linear-gradient(180deg, #A193861F 0%, #A193861F 24%, #A1938689 24%, #A1938689 76%);
+    }
+    &-wrap { 
+        padding-top: 260px;
+        margin: 0 auto;
+        @include tab {
+            padding-top: 60px;
+        }
+    }
+    h2 {
+        color: white;
+        font-size: 4rem;
+        letter-spacing: 16px;
+        font-family: "MS Mincho", "Hiragino Mincho Pro", serif;
+        @include tab {
+            font-size: 1.8rem;
+            letter-spacing: 7.2px;
+            @include tab {
+                padding-top: 50px;
+            }
+        }
+    }
+    p {
+        color: white;
+        width: 46%;
+        padding-top: 70px;
+        font-size: 1.6rem;
+        letter-spacing: 1.6px;
+        @include tab {
+            width: 100%;
+            padding-top: 18px;
+            
+        }
+    }
+    &__img {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+            @include tab {
+                min-width: 164px;
+                min-height: 205px;
+                width: 100% - 9.7 * 2;
+            }
+        }
+        @include tab {
+            display: flex;
+        }
+    }
+}
+
+.img1 {
+    margin-right: 5px;    
+}
+
+.concept-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tab {
+        display: flex;
+        flex-direction: column;
+    }
+}
