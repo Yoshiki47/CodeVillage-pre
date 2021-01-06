@@ -1,0 +1,57 @@
+.first-v {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/component.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    position: relative;
+    @include tab {
+        background-size: cover;
+        overflow: hidden;
+        background-position: 30%;
+    }
+}
+
+.catch {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    @include tab {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        top: 50%;
+        left: 55%;
+    }
+    @include sp {
+        left: 58%;
+    }
+    h2 {
+        font-size: 3.8rem;
+        margin-bottom: 48px;
+        font-family: "MS Mincho", "Hiragino Mincho Pro", serif;
+        letter-spacing: 3.8px;
+        @include tab {
+            width: 260px;
+            margin-bottom: 0;
+            font-size: 2.3rem;
+            letter-spacing: 2.3;
+            color: white;
+        }
+    }
+    p {
+        font-size: 3.8rem;
+        font-family: 'Dancing Script', cursive;
+        letter-spacing: 3.8px;
+        text-align: center;
+        @include tab {
+            width: 290px;
+            height: 95px;
+            color: white;
+        }
+    }
+}
