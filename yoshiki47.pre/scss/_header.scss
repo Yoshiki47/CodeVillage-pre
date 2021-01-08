@@ -18,27 +18,6 @@ header {
     }
 }
 
-.ham {
-    display: none;
-    @include tab {        
-        width: 20px;
-        height: 14px;
-        margin-right: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        span {
-            display: inline-block;
-            width: 100%;
-            height: 2px;
-            background-color: #3B4043;
-        }
-        span:last-child {
-            width: 70%;
-        }
-    } 
-}
-
 .hd-logo {
     font-size: 3.8rem;
     margin-right: 20px;
@@ -47,6 +26,46 @@ header {
         font-size: 2.2rem;
         letter-spacing: 2.2;
     }
+}
+
+.ham {
+    z-index: 10;
+    display: none;
+    @include tab {        
+        width: 20px;
+        height: 14px;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    } 
+}
+
+.top-span, .center-span, .bottom-span {
+    display: inline-block;
+    height: 2px;
+    background-color: #3B4043;
+}
+
+.top-span, .center-span {
+    width: 100%;
+}
+
+.top-sapn {
+    top: 0;
+}
+
+.center-span {
+    top: 20px;
+}
+
+.bottom-span {
+    bottom: 0;
+    width: 70%;
+}
+
+.ham:hover {
+    cursor: pointer;
 }
 
 .pc-navmenu {
@@ -66,12 +85,102 @@ header {
     li:not(:first-child) {
         color: #707070;
     }
+    li:nth-child(2) {
+        margin-left: 15px;
+    }
     li:nth-child(4) {
         margin-right: 0;
+    }
+    li:hover {
+        color: white;
+        text-shadow: 4px 4px 3px black;
     }
 }
 
 .menu-border {
     border-bottom: 1px solid #000;
     width: 45px;
+}
+
+
+// ハンバーガーナビメニュー部分
+.ham-nav-menu {
+    display: none;
+    @include tab {
+        position: fixed;
+        top: 0;
+        left: -100%; // 画面外に配置
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.8s; // スライド
+    }
+}
+
+.ham-nav-menu ul li {
+    font-size: 3rem;
+}
+
+.ham-nav-menu ul li:hover {
+    text-shadow: 4px 4px 3px gray;
+}
+
+.ham-nav-menu ul li:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.ham span {
+    transition: 1s;
+}
+
+
+// メニューボタンの動き
+.ham-fixed {
+    position: fixed;
+    right: 0;
+}
+
+.in {
+    transform: translateX(100%);
+}
+
+.active1, .active2, .active3 {
+    background-color: white;
+}
+
+.active1 {
+    transform: translateY(6px) rotate(-45deg);
+    top: 0;
+}
+
+.active2 {
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.active3 {
+    transform: translateY(-6px) rotate(45deg);
+    width: 100%;
+    bottom: 0;
+}
+
+
+//ナビ下線
+.ham-menu, .ham-concept, .ham-access, .ham-reserve {
+    position: relative;
+}
+
+.ham-menu::after, .ham-concept::after, .ham-access::after, .ham-reserve::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
 }

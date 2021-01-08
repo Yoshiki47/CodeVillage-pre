@@ -1,8 +1,8 @@
 .concept {
-    height: 967px;
+    height: 1000px;
     background:linear-gradient(180deg, #A193861F 0%, #A193861F 40%, #A1938689 40%, #A1938689 60%);
     @include tab {
-        height: 710px;
+        height: 750px;
         background:linear-gradient(180deg, #A193861F 0%, #A193861F 24%, #A1938689 24%, #A1938689 76%);
     }
     &-wrap { 
@@ -46,19 +46,14 @@
             width: 100%;
             height: auto;
             @include tab {
-                min-width: 164px;
-                min-height: 205px;
-                width: 100% - 9.7 * 2;
+                min-width: 164px; 
             }
-        }
-        @include tab {
-            display: flex;
         }
     }
 }
 
 .img1 {
-    margin-right: 5px;    
+    margin-right: 5px;
 }
 
 .concept-text {
@@ -67,7 +62,6 @@
     justify-content: center;
     align-items: center;
     @include tab {
-        display: flex;
         flex-direction: column;
     }
 }

@@ -1,3 +1,7 @@
+// font //
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+
 ///////////
 // 変数　//
 //////////
@@ -63,4 +67,7 @@ body {
 .inner {
     width: 100% - 9.7 * 2;
     margin: 0 auto;
+    @include sp {
+        width: 90%;
+    }
 }

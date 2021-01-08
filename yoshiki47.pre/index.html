@@ -11,21 +11,32 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <h1 class="hd-logo">SALON BEPPU</h1>
-        <div class="ham">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="ham" id="ham">
+            <span class="top-span" id="top-span"></span>
+            <span class="center-span" id="center-span"></span>
+            <span class="bottom-span" id="bottom-span"></span>
         </div>
         <nav class="pc-navmenu">
             <ul>
-                <li class="menu-border">MENU</li>
-                <li>CONCEPT</li>
-                <li>ACCESS</li>
-                <li>RESERVE</li>
+                <li class="menu-border"><a href="#menu">MENU</li></a>
+                <li><a href="#concept">CONCEPT</li></a>
+                <li><a href="#access">ACCESS</li></a>
+                <li><a href="#reserve">RESERVE</li></a>
             </ul>
         </nav>
+
+        <!--ハンバーガーナビメニュー部分-->
+        <nav class="ham-nav-menu" id="ham-nav-menu"> 
+            <ul>
+                <li class="ham-menu"><a href="#menu">MENU</li></a>
+                <li class="ham-concept"><a href="#concept">CONCEPT</li></a>
+                <li class="ham-access"><a href="#access">ACCESS</li></a>
+                <li class="ham-reserve"><a href="#reserve">RESERVE</li></a>
+            </ul>
+        </nav>
+        <!--ハンバーガーナビメニューここまで-->
     </header>
 
     <main>        
@@ -36,7 +47,7 @@
             </div>
         </section>
         
-        <section class="concept">
+        <section class="concept" id="concept">
             <div class="inner">
                 <div class="concept-wrap">
                     <h1 class="title">CONCEPT</h1>
@@ -52,7 +63,7 @@
             </div>
         </section>
         
-        <section class="menu">
+        <section class="menu" id="menu">
             <div class="inner">
                 <h1 class="title">MENU</h1>
                 <div class="menu-wrap">
@@ -86,7 +97,7 @@
             </div>
         </section>
         
-        <section class="access">
+        <section class="access" id="access">
             <div class="access-wrap">
                 <h1 class="title access-title">ACCESS</h1>
                 <div class="access-info">
@@ -110,14 +121,15 @@
         <hr class="ft-line">
         <div class="inner ft-inner">
             <div class="ft-info">
-                <h1 class="ft-logo">SALON BEPPU</h1>
+                <h1 class="ft-logo"><a href="#header">SALON BEPPU</h1></a>
                 <div class="ft-sns">
                     <i class="fab fa-twitter fa-2x ft-icon"></i>
                     <i class="fab fa-facebook-square fa-2x ft-icon"></i>
                 </div>
             </div>
         </div>
-        <button class="btn"><p>RESERVE</p></button>
+        <button class="btn" id="reserve"><p>RESERVE</p></button>
     </footer>
+    <script src="./js/main.js"></script>
 </body>
 </html>
