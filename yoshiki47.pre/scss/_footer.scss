@@ -72,12 +72,10 @@ footer {
     @include tab {
         top: 47%;
         left: 40%;
-        // ここにtranslate
     }
     @include sp {
         top: 47%;
         left: 27%;
-        transform : translate(-2%, 0%);
     }
     p {
         font-size: 1.8rem;

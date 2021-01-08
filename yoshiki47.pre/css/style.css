@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
 html {
   font-size: 62.5%;
 }
@@ -38,11 +37,6 @@ body {
   width: 80.6%;
   margin: 0 auto;
 }
-@media screen and (max-width: 600px) {
-  .inner {
-    width: 90%;
-  }
-}
 
 header {
   display: flex;
@@ -66,20 +60,7 @@ header {
   }
 }
 
-.hd-logo {
-  font-size: 3.8rem;
-  margin-right: 20px;
-  letter-spacing: 3.8px;
-}
-@media screen and (max-width: 600px) {
-  .hd-logo {
-    font-size: 2.2rem;
-    letter-spacing: 2.2;
-  }
-}
-
 .ham {
-  z-index: 10;
   display: none;
 }
 @media screen and (max-width: 959px) {
@@ -91,33 +72,27 @@ header {
     flex-direction: column;
     justify-content: space-between;
   }
+  .ham span {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: #3B4043;
+  }
+  .ham span:last-child {
+    width: 70%;
+  }
 }
 
-.top-span, .center-span, .bottom-span {
-  display: inline-block;
-  height: 2px;
-  background-color: #3B4043;
+.hd-logo {
+  font-size: 3.8rem;
+  margin-right: 20px;
+  letter-spacing: 3.8px;
 }
-
-.top-span, .center-span {
-  width: 100%;
-}
-
-.top-sapn {
-  top: 0;
-}
-
-.center-span {
-  top: 20px;
-}
-
-.bottom-span {
-  bottom: 0;
-  width: 70%;
-}
-
-.ham:hover {
-  cursor: pointer;
+@media screen and (max-width: 600px) {
+  .hd-logo {
+    font-size: 2.2rem;
+    letter-spacing: 2.2;
+  }
 }
 
 @media screen and (max-width: 959px) {
@@ -138,99 +113,13 @@ header {
 .pc-navmenu ul li:not(:first-child) {
   color: #707070;
 }
-.pc-navmenu ul li:nth-child(2) {
-  margin-left: 15px;
-}
 .pc-navmenu ul li:nth-child(4) {
   margin-right: 0;
-}
-.pc-navmenu ul li:hover {
-  color: white;
-  text-shadow: 4px 4px 3px black;
 }
 
 .menu-border {
   border-bottom: 1px solid #000;
   width: 45px;
-}
-
-.ham-nav-menu {
-  display: none;
-}
-@media screen and (max-width: 959px) {
-  .ham-nav-menu {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.8s;
-  }
-}
-
-.ham-nav-menu ul li {
-  font-size: 3rem;
-}
-
-.ham-nav-menu ul li:hover {
-  text-shadow: 4px 4px 3px gray;
-}
-
-.ham-nav-menu ul li:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-.ham span {
-  transition: 1s;
-}
-
-.ham-fixed {
-  position: fixed;
-  right: 0;
-}
-
-.in {
-  transform: translateX(100%);
-}
-
-.active1, .active2, .active3 {
-  background-color: white;
-}
-
-.active1 {
-  transform: translateY(6px) rotate(-45deg);
-  top: 0;
-}
-
-.active2 {
-  transform: translateX(30px);
-  opacity: 0;
-}
-
-.active3 {
-  transform: translateY(-6px) rotate(45deg);
-  width: 100%;
-  bottom: 0;
-}
-
-.ham-menu, .ham-concept, .ham-access, .ham-reserve {
-  position: relative;
-}
-
-.ham-menu::after, .ham-concept::after, .ham-access::after, .ham-reserve::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
 }
 
 .first-v {
@@ -246,16 +135,13 @@ header {
   .first-v {
     background-size: cover;
     overflow: hidden;
-    background-position: 30%;
   }
 }
 
 .catch {
   position: absolute;
-  top: 50%;
-  left: 25%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  top: 316px;
+  left: 142px;
 }
 @media screen and (max-width: 959px) {
   .catch {
@@ -263,13 +149,6 @@ header {
     flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
-    top: 50%;
-    left: 55%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .catch {
-    left: 58%;
   }
 }
 .catch h2 {
@@ -280,8 +159,6 @@ header {
 }
 @media screen and (max-width: 959px) {
   .catch h2 {
-    width: 260px;
-    margin-bottom: 0;
     font-size: 2.3rem;
     letter-spacing: 2.3;
     color: white;
@@ -289,25 +166,25 @@ header {
 }
 .catch p {
   font-size: 3.8rem;
-  font-family: 'Dancing Script', cursive;
+  font-family: Zapfino, cursive;
   letter-spacing: 3.8px;
-  text-align: center;
 }
 @media screen and (max-width: 959px) {
   .catch p {
-    width: 290px;
     height: 95px;
+    font-size: 2.8rem;
+    letter-spacing: 2.8;
     color: white;
   }
 }
 
 .concept {
-  height: 1000px;
+  height: 967px;
   background: linear-gradient(180deg, #A193861F 0%, #A193861F 40%, #A1938689 40%, #A1938689 60%);
 }
 @media screen and (max-width: 959px) {
   .concept {
-    height: 750px;
+    height: 710px;
     background: linear-gradient(180deg, #A193861F 0%, #A193861F 24%, #A1938689 24%, #A1938689 76%);
   }
 }
@@ -364,6 +241,13 @@ header {
 @media screen and (max-width: 959px) {
   .concept__img img {
     min-width: 164px;
+    min-height: 205px;
+    width: 80.6%;
+  }
+}
+@media screen and (max-width: 959px) {
+  .concept__img {
+    display: flex;
   }
 }
 
@@ -379,6 +263,7 @@ header {
 }
 @media screen and (max-width: 959px) {
   .concept-text {
+    display: flex;
     flex-direction: column;
   }
 }
@@ -426,7 +311,6 @@ header {
 }
 @media screen and (max-width: 600px) {
   .menu-item h2 {
-    margin-top: 25px;
     font-size: 3rem;
     font-weight: bold;
     text-align: left;
@@ -444,7 +328,7 @@ header {
   font-size: 1.6rem;
   letter-spacing: 1.6px;
   text-align: left;
-  padding: 30px 0px;
+  padding: 34px 10px;
 }
 
 .price {
@@ -620,7 +504,6 @@ footer {
   .btn {
     top: 47%;
     left: 27%;
-    transform: translate(-2%, 0%);
   }
 }
 .btn p {
