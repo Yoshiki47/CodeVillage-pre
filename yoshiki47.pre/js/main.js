@@ -20,7 +20,7 @@ function removeClass() {
     document.getElementById('ham-nav-menu').classList.remove('in');
 }
 
-// id="ham"からha,-fixedクラスを削除
+// id="ham"からham-fixedクラスを削除
 function removeFixed() {
     document.getElementById('ham').classList.remove('ham-fixed');
 }
