@@ -303,6 +303,7 @@ header {
 
 .concept {
   height: 1000px;
+  padding-bottom: 100px;
   background: linear-gradient(180deg, #A193861F 0%, #A193861F 40%, #A1938689 40%, #A1938689 60%);
 }
 @media screen and (max-width: 959px) {
@@ -313,7 +314,6 @@ header {
 }
 .concept-wrap {
   padding-top: 260px;
-  margin: 0 auto;
 }
 @media screen and (max-width: 959px) {
   .concept-wrap {
@@ -369,6 +369,25 @@ header {
 
 .img1 {
   margin-right: 5px;
+}
+@media screen and (max-width: 959px) {
+  .img1 {
+    object-fit: cover;
+    object-position: 75% 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .img1 {
+    object-fit: cover;
+    object-position: 75% 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .img2 {
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
 }
 
 .concept-text {

@@ -1,5 +1,6 @@
 .concept {
     height: 1000px;
+    padding-bottom: 100px;
     background:linear-gradient(180deg, #A193861F 0%, #A193861F 40%, #A1938689 40%, #A1938689 60%);
     @include tab {
         height: 750px;
@@ -7,7 +8,6 @@
     }
     &-wrap { 
         padding-top: 260px;
-        margin: 0 auto;
         @include tab {
             padding-top: 60px;
         }
@@ -54,6 +54,21 @@
 
 .img1 {
     margin-right: 5px;
+    @include tab {
+        object-fit: cover;
+        object-position: 75% 50%;
+    }
+    @include sp {
+        object-fit: cover;
+        object-position: 75% 50%;
+    }
+}
+
+.img2 {
+    @include sp {
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
 }
 
 .concept-text {
