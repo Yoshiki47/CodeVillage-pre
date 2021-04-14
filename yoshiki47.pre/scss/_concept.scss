@@ -45,8 +45,9 @@
         img {
             width: 100%;
             height: auto;
-            @include tab {
-                min-width: 164px; 
+            @include sp {
+                width: 164px;
+                height: 164px;
             }
         }
     }
